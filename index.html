@@ -1,87 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Types of Navbar</title>
     <style>
-        * {
-            background-color: rgb(255, 255, 255);
-            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-            text-decoration: none;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            padding: 10px;
-            background-color: #f0f0f0;
-        }
-        .navbar h2 {
-            color: rgb(255, 0, 0);
-        }
+      * {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-decoration: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        padding: 10px;
+        background-color: #f0f0f0;
+      }
+      .navbar h2 {
+        color: rgb(255, 0, 0);
+      }
+      .nav-1 ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav-1 a {
+        color: rgb(0, 109, 204);
+        position: relative;
+      }
+      nav button {
+        color: aliceblue;
+        background-color: rgba(39, 22, 234, 0.751);
+        padding: 7px 15px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      nav button:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgba(246, 246, 246, 0.751);
+      }
+      .nav-1 a::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav-1 a:hover::after {
+        transform: scaleX(1);
+      }
+      /* Media query for mobile responsiveness */
+      @media (max-width: 600px) {
         .nav-1 ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
         }
-        .nav-1 a {
-            color: rgb(0, 109, 204);
-            position: relative;
+        .nav-1 li {
+          margin-bottom: 0.75rem;
         }
-        .nav-1 button {
-            color: aliceblue;
-            background-color: rgba(39, 22, 234, 0.751);
-            padding: 7px 15px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .nav-1 button:hover {
-            background-color: rgb(0, 0, 0);
-            color: rgba(246, 246, 246, 0.751);
-        }
-        .nav-1 a::after {
-            content: "";
-            height: 2px;
-            width: 100%;
-            background-color: blue;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-        .nav-1 a:hover::after {
-            transform: scaleX(1);
-        }
-        /* Media query for mobile responsiveness */
-        @media (max-width: 600px) {
-            .nav-1 ul {
-                flex-direction: column;
-                align-items: center;
-                
-            }
-            .nav-1 li{
-              margin-bottom: 0.75rem;
-            }
+      }
 
-        }
-    </style>
-</head>
-<body>
-    <header class="navbar">
-        <h2>Variation-1: Nav1</h2>
-        <nav class="nav-1">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact-me">Contact Me</a></li>
-                <li><button>Sign Up</button></li>
-            </ul>
-        </nav>
+      .nav-2 {
+        background-color: rgb(64, 61, 61);
+        display: block;
+        width: 50%;
+      }
+      .nav-2 li{
+        margin: 10px;
+        padding: 5px;
         
+        
+      }
+      .nav-2 a{
+        color: #f0f0f0;
+        width: 100%;
+        
+      }
+      .nav-2 a:hover{
+        
+        background-color: #000000;
+      }
+     
+      
+
+     
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <h2>Variation-1: Nav1</h2>
+      <nav class="nav-1" style="margin-bottom: 20px">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
+          <li><button>Sign Up</button></li>
+        </ul>
+      </nav>
+      <hr />
+      <nav class="nav-2" style="margin: 10px">
+        <h2>Variation-2:navbar-2(like "X")</h2>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about us">About us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button>Sign up</button></li>
+      </nav>
+      <hr />
     </header>
-</body>
+  </body>
 </html>
