@@ -20,16 +20,16 @@
         .navbar h2 {
             color: rgb(255, 0, 0);
         }
-        nav ul {
+        .nav-1 ul {
             display: flex;
             justify-content: space-around;
             align-items: center;
         }
-        nav a {
+        .nav-1 a {
             color: rgb(0, 109, 204);
             position: relative;
         }
-        nav button {
+        .nav-1 button {
             color: aliceblue;
             background-color: rgba(39, 22, 234, 0.751);
             padding: 7px 15px;
@@ -38,11 +38,11 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        nav button:hover {
+        .nav-1 button:hover {
             background-color: rgb(0, 0, 0);
             color: rgba(246, 246, 246, 0.751);
         }
-        nav a::after {
+        .nav-1 a::after {
             content: "";
             height: 2px;
             width: 100%;
@@ -53,15 +53,18 @@
             transform: scaleX(0);
             transition: transform 0.3s ease-in-out;
         }
-        nav a:hover::after {
+        .nav-1 a:hover::after {
             transform: scaleX(1);
         }
         /* Media query for mobile responsiveness */
         @media (max-width: 600px) {
-            nav ul {
+            .nav-1 ul {
                 flex-direction: column;
                 align-items: center;
                 
+            }
+            .nav-1 li{
+              margin-bottom: 0.75rem;
             }
 
         }
@@ -70,7 +73,7 @@
 <body>
     <header class="navbar">
         <h2>Variation-1: Nav1</h2>
-        <nav>
+        <nav class="nav-1">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -78,7 +81,7 @@
                 <li><button>Sign Up</button></li>
             </ul>
         </nav>
-        <h2>by &copy; ayushthebatman</h2>
+        
     </header>
 </body>
 </html>
